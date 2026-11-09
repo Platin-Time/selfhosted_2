@@ -1,0 +1,9 @@
+# Используется на сервере: тянет готовый образ из GHCR, ничего не собирает.
+services:
+  app:
+    image: ${IMAGE}:${TAG:-latest}
+    ports:
+      - "8000:8000"
+    environment:
+      PORT: "8000"
+    restart: unless-stopped
