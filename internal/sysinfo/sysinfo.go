@@ -36,6 +36,7 @@ type Info struct {
 }
 
 // Collect возвращает снимок состояния на текущий момент.
+// for test
 // Поля из /proc опциональны: если файла нет (не Linux), они просто не попадут в JSON.
 func Collect() Info {
 	host, _ := os.Hostname()
